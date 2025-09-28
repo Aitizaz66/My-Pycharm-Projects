@@ -1,0 +1,22 @@
+#slicing l1[1:5:2] starting index include and ending index exclude. 2 means increment 2 in 1 by default is 1.
+l1=[1,2,3,4,4,5,5,6,6,7,8,89]
+print(l1)
+print(l1.pop())
+print(l1)
+print(l1.count(4))
+print(l1.remove(7))
+print(l1)
+print(l1.reverse())
+print(l1)
+print(l1.append(11))
+print(l1)
+print(l1.clear())
+print(l1)
+print(l1.insert(1,1))
+print(l1.insert(0,3))
+print(l1)
+print(l1.index(3))
+print(l1)
+print(l1.copy())
+l1.extend()
+
