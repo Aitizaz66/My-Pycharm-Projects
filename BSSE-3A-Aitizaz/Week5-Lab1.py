@@ -38,9 +38,8 @@ def sum(**values):
     print(values["val2"])
     print(values['val3'])
     print(values.keys())  # print all key in the dictionary
-    print(values)
-    for i in values.keys():
-        print(values[i])  # print all values in dic
+    for i in values:
+        print("Values Are : ", values[i])  # print all values in dic
 
 
 print(sum(val1=34, val2=123, val3=234, val4=87, val5=98, val6=324))
