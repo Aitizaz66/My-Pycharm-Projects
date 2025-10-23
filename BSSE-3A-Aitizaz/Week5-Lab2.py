@@ -7,6 +7,8 @@ def calculatebill(*prices):
 
 
 def employee_info(**kwargs):
+    # for i in kwargs:
+    #     print(i, " : ", kwargs[i])
     print(kwargs)
 
 

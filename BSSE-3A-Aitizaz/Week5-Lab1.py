@@ -39,7 +39,7 @@ def sum(**values):
     print(values['val3'])
     print(values.keys())  # print all key in the dictionary
     for i in values:
-        print("Values Are : ", values[i])  # print all values in dic
+        print(i, " : ", values[i])  # print all values in dic
 
 
 print(sum(val1=34, val2=123, val3=234, val4=87, val5=98, val6=324))
@@ -48,7 +48,7 @@ print(sum(val1=34, val2=123, val3=234, val4=87, val5=98, val6=324))
 # task user enter a value and then assign it arbitrary function
 def inputfunction(**values):
     for i in values.keys():
-        print("Values Are : ", values[i])
+        print(i, " : ", values[i])
 
 
 while True:
