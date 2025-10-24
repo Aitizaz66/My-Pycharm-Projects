@@ -143,3 +143,23 @@ def table(n, start=1, end=10):
 
 
 print(table(10))
+
+
+# convert nested list to flat list
+def flatten_list(nested):
+    flat = []
+
+    for item in nested:
+        if type(item) == list:
+            sublist = flatten_list(item)  # Recursive call
+            for element in sublist:
+                flat.append(element)  # Manually append each item
+        else:
+            flat.append(item)  # Append non-list item
+
+    return flat
+
+
+embedded = [1, [2, [3, 4], 5], [6, 7], 8]
+flat = flatten_list(embedded)
+print(flat)
