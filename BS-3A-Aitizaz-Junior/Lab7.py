@@ -33,3 +33,16 @@ def get_palindrom(a):
 
 
 print(get_palindrom(["python", "madam", "raddar"]))
+
+
+# Another Method
+def get_palindrom(a):
+    plist = []
+    for word in a:
+        small = word.lower()
+        if small == small[::-1]:  # reverse using slicing
+            plist.append(word)
+    return plist
+
+
+print(get_palindrom(["python", "madam", "raddar"]))

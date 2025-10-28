@@ -1,10 +1,10 @@
-#Conditional Statement
+# Conditional Statement
 
 """
 program that find number is even, odd or Negative
 """
-from parso.python.tree import Number
-#ArmStrong number Finding
+
+# ArmStrong number Finding
 # a=3
 # if (a%2)==0:
 #     print("Even Number")
@@ -12,16 +12,16 @@ from parso.python.tree import Number
 #     print("Negative Number")
 # else:
 #     print("Odd Number")
-var=1235
-a=var%10
+var = 100
+a = var % 10
 print(a)
-v=var//10
+v = var // 10
 print(v)
-a2=v%10
+a2 = v % 10
 print(a2)
-v=v//10
+v = v // 10
 print(v)
-a3=v%2
+a3 = v % 2
 print(a3)
 
 # c1=b1*b1*b1
