@@ -72,6 +72,17 @@ def match_segment(var, pattern, input, bindings):
     return match
 
 
+def match(pattern, input):
+    return match_pattern(pattern.split(), input.split())
+
+
 bindings = {}
-print(match_pattern(['?*a', 'Eliza', '?*b'], ['hello', 'Eliza', 'How', 'are ', 'you']))
+print(match_pattern(['?*a', 'Aitizaz', '?*b'], ['hello', 'Aitizaz', 'I', 'am ', 'fine']))
 print(match_pattern(['?*c', 'And', '?*d'], ['How', 'are', 'you', 'And', 'what', 'do', 'you', 'do']))
+print(match("?*a my name is ?*name", "Hello my name is Aitizaz Ahsan Awan"))
+print(match("if you want to play ?a , please ?*v as a ?b",
+            "if you want to play cricket , please register yourself as a player"))
+print(match("?*A I WANT TO ORDER ?*B", "I WANT TO ORDER PIZZA AND BURGER WITH EXTRA CHEESE"))
+print(match("?*X DO YOU HAVE ?*Y", "DO YOU HAVE LAPTOP"))
+print(match("?*X CAN YOU EXPLAIN ?*Y", "CAN YOU EXPLAIN RECURSION"))
+print(match("?*X WHAT IF IT RAINS ?*Y", "I AM WORRIED. WHAT IF IT RAINS DURING OUR TRIP"))
