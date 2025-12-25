@@ -87,15 +87,10 @@ def is_palindrome(val):
 def contains_palindrome_recursive(lst, index=0):
     if index >= len(lst):
         return False
-    found = False
     if is_palindrome(lst[index]):
         print("Palindrome found:", lst[index])
-        found = True
-    # Continue checking the rest of the list
-    return contains_palindrome_recursive(lst, index + 1) or found
 
 
-my_list = [123, 'madam', 456, 'hello', 'raddar', 121]
 contains_palindrome_recursive(my_list)
 
 
@@ -145,47 +140,3 @@ def table(n, start=1, end=10):
 
 
 print(table(10))
-
-
-# convert nested list to flat list
-def flatten_list(nested):
-    flat = []
-
-    for item in nested:
-        if type(item) == list:
-            sublist = flatten_list(item)  # Recursive call
-            for element in sublist:
-                flat.append(element)  # Manually append each item
-        else:
-            flat.append(item)  # Append non-list item
-
-    return flat
-
-
-embedded = [1, [2, [3, 4], 5], [6, 7], 8]
-flat = flatten_list(embedded)
-print(flat)
-
-
-# paper Question
-def calculate_Percentage_Rec(total_attendance):
-    for student_id, records in total_attendance.items():
-        flat = []
-        for item in records:
-            if type(item) == list:
-                flat += item
-            else:
-                flat.append(item)
-
-        total_classes = len(flat)
-        total_presents = flat.count('p')
-        percentage = (total_presents / total_classes) * 100
-
-        print(f"{student_id} = {round(percentage, 2)}")
-
-
-total_attendance = {
-    '2024-arid-1234': ['p', ['p', 'a', 'p'], 'a'],
-    '2024-arid-1235': ['p', 'a', ['p', 'p', 'a'], 'a', 'p']
-}
-calculate_Percentage_Rec(total_attendance)
